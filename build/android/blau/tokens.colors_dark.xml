@@ -1,0 +1,136 @@
+
+
+// Do not edit directly
+// Generated on Thu, 10 Nov 2022 08:58:52 GMT
+
+
+
+package ;
+
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.*
+
+object  {
+  val appBarBackground = #242424
+  val background = #191919
+  val backgroundAlternative = #242424
+  val backgroundBrand = #191919
+  val backgroundContainer = #242424
+  val backgroundFeedbackBottom = #191919
+  val backgroundOverlay = rgba(#242424, 0.8)
+  val backgroundSkeleton = #242424
+  val backgroundSkeletonInverse = #242424
+  val badge = #F64417
+  val border = #242424
+  val borderDark = #808285
+  val borderLight = #191919
+  val borderSelected = #005A99
+  val brand = #00B6F1
+  val brandHigh = rgba(#FFFFFF, 0.05)
+  val brandLow = rgba(#FFFFFF, 0.05)
+  val buttonDangerBackground = #F64417
+  val buttonDangerBackgroundHover = #C93712
+  val buttonDangerBackgroundSelected = #C93712
+  val buttonLinkBackgroundSelected = rgba(#7814B3, 0.3)
+  val buttonLinkBackgroundSelectedInverse = rgba(#7814B3, 0.3)
+  val buttonPrimaryBackground = #0072BC
+  val buttonPrimaryBackgroundHover = #005A99
+  val buttonPrimaryBackgroundInverse = #00B6F1
+  val buttonPrimaryBackgroundSelected = #005A99
+  val buttonPrimaryBackgroundSelectedInverse = #005A99
+  val buttonSecondaryBackground = #0072BC
+  val buttonSecondaryBackgroundSelected = #005A99
+  val buttonSecondaryBorderInverse = #00B6F1
+  val buttonSecondaryBorderSelectedInverse = #005A99
+  val control = #242424
+  val controlActivated = #0072BC
+  val controlError = #F64417
+  val divider = rgba(#FFFFFF, 0.05)
+  val dividerInverse = rgba(#FFFFFF, 0.05)
+  val error = #F64417
+  val errorHigh = #F97C5D
+  val errorLow = rgba(#FFFFFF, 0.05)
+  val feedbackErrorBackground = #F64417
+  val feedbackInfoBackground = #242424
+  val highlight = #00B6F1
+  val inverse = #E7E7E7
+  val iosControlKnob = #E7E7E7
+  val loadingBar = #00B6F1
+  val loadingBarBackground = #242424
+  val navigationBarBackground = #191919
+  val navigationBarDivider = #191919
+  val neutralHigh = #E7E7E7
+  val neutralLow = #313235
+  val neutralMedium = #808285
+  val paletteBlauBluePrimary = #00B6F1
+  val paletteBlauBluePrimary10 = #F7FDFF
+  val paletteBlauBluePrimary20 = #E5F6FD
+  val paletteBlauBluePrimary30 = #B3E9FB
+  val paletteBlauBlueSecondary = #0072BC
+  val paletteBlauBlueSecondary10 = #E5F1F9
+  val paletteBlauBlueSecondary20 = #B2D4EC
+  val paletteBlauBlueSecondary30 = #80B7DF
+  val paletteBlauBlueSecondary60 = #005A99
+  val paletteBlauGreen = #30D300
+  val paletteBlauGreen10 = #EAFBE5
+  val paletteBlauGreen30 = #97E980
+  val paletteBlauGreen70 = #1D7F00
+  val paletteBlauPurple = #7814B3
+  val paletteBlauPurple10 = #F1E7F7
+  val paletteBlauPurple30 = #BB89D9
+  val paletteBlauRed = #F64417
+  val paletteBlauRed10 = #FEECE8
+  val paletteBlauRed20 = #FCC7B9
+  val paletteBlauRed30 = #FA9E87
+  val paletteBlauRed40 = #F97C5D
+  val paletteBlauRed70 = #C93712
+  val paletteBlauYellow = #FFA922
+  val paletteBlauYellow10 = #FFF6E9
+  val paletteBlauYellow40 = #FFC364
+  val paletteBlauYellow60 = #F09500
+  val paletteBlauYellow70 = #996614
+  val paletteDarkModeBlack = #191919
+  val paletteDarkModeGrey = #242424
+  val paletteDarkModeGrey6 = #313235
+  val paletteGrey1 = #F5F9FA
+  val paletteGrey2 = #E7E7E7
+  val paletteGrey3 = #B8B8B8
+  val paletteGrey4 = #A0A0A0
+  val paletteGrey5 = #808285
+  val paletteGrey6 = #000000
+  val paletteWhite = #FFFFFF
+  val promo = #7814B3
+  val promoHigh = #BB89D9
+  val promoLow = rgba(#FFFFFF, 0.05)
+  val skeletonWave = #808285
+  val success = #30D300
+  val successHigh = #97E980
+  val successLow = rgba(#FFFFFF, 0.05)
+  val textAppBar = #808285
+  val textAppBarSelected = #E7E7E7
+  val textButtonPrimary = #E7E7E7
+  val textButtonPrimaryInverse = #E7E7E7
+  val textButtonPrimaryInverseSelected = #E7E7E7
+  val textButtonSecondary = #E7E7E7
+  val textButtonSecondaryInverse = #E7E7E7
+  val textButtonSecondaryInverseSelected = #005A99
+  val textButtonSecondarySelected = #005A99
+  val textLink = #BB89D9
+  val textLinkDanger = #F64417
+  val textLinkInverse = #BB89D9
+  val textLinkSnackbar = #BB89D9
+  val textNavigationBarPrimary = #E7E7E7
+  val textNavigationBarSecondary = #A0A0A0
+  val textNavigationSearchBarHint = #A0A0A0
+  val textNavigationSearchBarText = #E7E7E7
+  val textPrimary = #E7E7E7
+  val textPrimaryInverse = #E7E7E7
+  val textSecondary = #A0A0A0
+  val textSecondaryInverse = #A0A0A0
+  val toggleAndroidBackgroundActive = #80B7DF
+  val toggleAndroidInactive = #808285
+  val warning = #FFA922
+  val warningHigh = #FFC364
+  val warningLow = rgba(#FFFFFF, 0.05)
+}

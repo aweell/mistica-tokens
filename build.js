@@ -5,7 +5,7 @@ const StyleDictionaryPackage = require('style-dictionary');
 function getColor(brand, platform, mode) {
   return {
     "source": [
-      `tokens/local/${brand}/${mode}/*.json`,
+      `tokens/local/${brand}/${mode}*.json`,
       "tokens/global/**/*.json",
       `tokens/platforms/${platform}/*.json`
     ],
@@ -14,8 +14,8 @@ function getColor(brand, platform, mode) {
         "transformGroup": "js",
         "buildPath": `build/web/${brand}/`,
         "files": [{
-          "destination": `color-${mode}.js`,
-          "format": "javascript/es6"
+          "destination": `color-${mode}.json`,
+          "format": "json/nested"
         }]
 
       },
