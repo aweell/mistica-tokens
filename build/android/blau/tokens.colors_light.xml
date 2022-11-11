@@ -1,7 +1,7 @@
 
 
 // Do not edit directly
-// Generated on Thu, 10 Nov 2022 08:58:52 GMT
+// Generated on Fri, 11 Nov 2022 17:41:22 GMT
 
 
 
@@ -46,6 +46,43 @@ object  {
   val control = #E7E7E7
   val controlActivated = #0072BC
   val controlError = #F64417
+  val coreBlauBluePrimary = #00B6F1
+  val coreBlauBluePrimary10 = #F7FDFF
+  val coreBlauBluePrimary20 = #E5F6FD
+  val coreBlauBluePrimary30 = #B3E9FB
+  val coreBlauBlueSecondary = #0072BC
+  val coreBlauBlueSecondary10 = #E5F1F9
+  val coreBlauBlueSecondary20 = #B2D4EC
+  val coreBlauBlueSecondary30 = #80B7DF
+  val coreBlauBlueSecondary60 = #005A99
+  val coreBlauGreen = #30D300
+  val coreBlauGreen10 = #EAFBE5
+  val coreBlauGreen30 = #97E980
+  val coreBlauGreen70 = #1D7F00
+  val coreBlauPurple = #7814B3
+  val coreBlauPurple10 = #F1E7F7
+  val coreBlauPurple30 = #BB89D9
+  val coreBlauRed = #F64417
+  val coreBlauRed10 = #FEECE8
+  val coreBlauRed20 = #FCC7B9
+  val coreBlauRed30 = #FA9E87
+  val coreBlauRed40 = #F97C5D
+  val coreBlauRed70 = #C93712
+  val coreBlauYellow = #FFA922
+  val coreBlauYellow10 = #FFF6E9
+  val coreBlauYellow40 = #FFC364
+  val coreBlauYellow60 = #F09500
+  val coreBlauYellow70 = #996614
+  val coreDarkModeBlack = #191919
+  val coreDarkModeGrey = #242424
+  val coreDarkModeGrey6 = #313235
+  val coreGrey1 = #F5F9FA
+  val coreGrey2 = #E7E7E7
+  val coreGrey3 = #B8B8B8
+  val coreGrey4 = #A0A0A0
+  val coreGrey5 = #808285
+  val coreGrey6 = #000000
+  val coreWhite = #FFFFFF
   val divider = #E7E7E7
   val dividerInverse = rgba(#FFFFFF, 0.2)
   val error = #F64417
@@ -63,43 +100,6 @@ object  {
   val neutralHigh = #000000
   val neutralLow = #E7E7E7
   val neutralMedium = #808285
-  val paletteBlauBluePrimary = #00B6F1
-  val paletteBlauBluePrimary10 = #F7FDFF
-  val paletteBlauBluePrimary20 = #E5F6FD
-  val paletteBlauBluePrimary30 = #B3E9FB
-  val paletteBlauBlueSecondary = #0072BC
-  val paletteBlauBlueSecondary10 = #E5F1F9
-  val paletteBlauBlueSecondary20 = #B2D4EC
-  val paletteBlauBlueSecondary30 = #80B7DF
-  val paletteBlauBlueSecondary60 = #005A99
-  val paletteBlauGreen = #30D300
-  val paletteBlauGreen10 = #EAFBE5
-  val paletteBlauGreen30 = #97E980
-  val paletteBlauGreen70 = #1D7F00
-  val paletteBlauPurple = #7814B3
-  val paletteBlauPurple10 = #F1E7F7
-  val paletteBlauPurple30 = #BB89D9
-  val paletteBlauRed = #F64417
-  val paletteBlauRed10 = #FEECE8
-  val paletteBlauRed20 = #FCC7B9
-  val paletteBlauRed30 = #FA9E87
-  val paletteBlauRed40 = #F97C5D
-  val paletteBlauRed70 = #C93712
-  val paletteBlauYellow = #FFA922
-  val paletteBlauYellow10 = #FFF6E9
-  val paletteBlauYellow40 = #FFC364
-  val paletteBlauYellow60 = #F09500
-  val paletteBlauYellow70 = #996614
-  val paletteDarkModeBlack = #191919
-  val paletteDarkModeGrey = #242424
-  val paletteDarkModeGrey6 = #313235
-  val paletteGrey1 = #F5F9FA
-  val paletteGrey2 = #E7E7E7
-  val paletteGrey3 = #B8B8B8
-  val paletteGrey4 = #A0A0A0
-  val paletteGrey5 = #808285
-  val paletteGrey6 = #000000
-  val paletteWhite = #FFFFFF
   val promo = #7814B3
   val promoHigh = #7814B3
   val promoLow = #F1E7F7

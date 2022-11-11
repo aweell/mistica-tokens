@@ -2,11 +2,11 @@ const StyleDictionaryPackage = require('style-dictionary');
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 
+
 function getColor(brand, platform, mode) {
   return {
     "source": [
-      `tokens/local/${brand}/${mode}*.json`,
-      "tokens/global/**/*.json",
+      `tokens/local/color/${brand}/${mode}.json`,
       `tokens/platforms/${platform}/*.json`
     ],
     "platforms": {
@@ -14,6 +14,7 @@ function getColor(brand, platform, mode) {
         "transformGroup": "js",
         "buildPath": `build/web/${brand}/`,
         "files": [{
+          "filter": "isCore",
           "destination": `color-${mode}.json`,
           "format": "json/nested"
         }]
@@ -53,6 +54,13 @@ console.log('Build started...');
 
     const StyleDictionary = StyleDictionaryPackage.extend(getColor(brand, platform, mode));
 
+    StyleDictionary.registerFilter({
+      name: 'isCore',
+      matcher: function(token) {
+        return token.attributes.category !== 'core';
+      }
+    })
+
     StyleDictionary.buildPlatform(platform);
 
     console.log('\nEnd processing');
@@ -69,8 +77,8 @@ console.log('\nBuild completed!');
 function getTypography(brand, platform) {
   return {
     "source": [
-      `tokens/local/${brand}/*.json`,
-      "tokens/global/**/*.json",
+      `tokens/local/typography/${brand}.json`,
+      "tokens/global/typography.json",
       `tokens/platforms/${platform}/*.json`
     ],
     "platforms": {
@@ -78,8 +86,9 @@ function getTypography(brand, platform) {
         "transformGroup": "js",
         "buildPath": `build/web/`,
         "files": [{
-          "destination": `${brand}/typography.js`,
-          "format": "javascript/es6"
+          "destination": `${brand}/typography.json`,
+          "filter": "isCore",
+          "format": "json/nested",
         }]
 
       },
@@ -114,9 +123,18 @@ console.log('Build started...');
     console.log('\n==============================================');
     console.log(`\nProcessing: [${platform}] [${brand}]`);
 
+
     const StyleDictionary = StyleDictionaryPackage.extend(getTypography(brand, platform));
 
+    StyleDictionary.registerFilter({
+      name: 'isCore',
+      matcher: function(token) {
+        return token.attributes.category !== 'core';
+      }
+    })
+
     StyleDictionary.buildPlatform(platform);
+   
 
     console.log('\nEnd processing');
 
@@ -126,3 +144,5 @@ console.log('Build started...');
 
 console.log('\n==============================================');
 console.log('\nBuild completed!');
+
+

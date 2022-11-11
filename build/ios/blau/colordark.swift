@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Thu, 10 Nov 2022 08:58:52 GMT
+// Generated on Fri, 11 Nov 2022 17:41:22 GMT
 
 
 import UIKit
@@ -39,11 +39,48 @@ public class  {
     public static let buttonPrimaryBackgroundSelectedInverse = #005A99
     public static let buttonSecondaryBackground = #0072BC
     public static let buttonSecondaryBackgroundSelected = #005A99
-    public static let buttonSecondaryBorderInverse = #00B6F1
+    public static let buttonSecondaryBorderInverse = #FFFFFF
     public static let buttonSecondaryBorderSelectedInverse = #005A99
-    public static let control = #242424
+    public static let control = #313235
     public static let controlActivated = #0072BC
     public static let controlError = #F64417
+    public static let coreBlauBluePrimary = #00B6F1
+    public static let coreBlauBluePrimary10 = #F7FDFF
+    public static let coreBlauBluePrimary20 = #E5F6FD
+    public static let coreBlauBluePrimary30 = #B3E9FB
+    public static let coreBlauBlueSecondary = #0072BC
+    public static let coreBlauBlueSecondary10 = #E5F1F9
+    public static let coreBlauBlueSecondary20 = #B2D4EC
+    public static let coreBlauBlueSecondary30 = #80B7DF
+    public static let coreBlauBlueSecondary60 = #005A99
+    public static let coreBlauGreen = #30D300
+    public static let coreBlauGreen10 = #EAFBE5
+    public static let coreBlauGreen30 = #97E980
+    public static let coreBlauGreen70 = #1D7F00
+    public static let coreBlauPurple = #7814B3
+    public static let coreBlauPurple10 = #F1E7F7
+    public static let coreBlauPurple30 = #BB89D9
+    public static let coreBlauRed = #F64417
+    public static let coreBlauRed10 = #FEECE8
+    public static let coreBlauRed20 = #FCC7B9
+    public static let coreBlauRed30 = #FA9E87
+    public static let coreBlauRed40 = #F97C5D
+    public static let coreBlauRed70 = #C93712
+    public static let coreBlauYellow = #FFA922
+    public static let coreBlauYellow10 = #FFF6E9
+    public static let coreBlauYellow40 = #FFC364
+    public static let coreBlauYellow60 = #F09500
+    public static let coreBlauYellow70 = #996614
+    public static let coreDarkModeBlack = #191919
+    public static let coreDarkModeGrey = #242424
+    public static let coreDarkModeGrey6 = #313235
+    public static let coreGrey1 = #F5F9FA
+    public static let coreGrey2 = #E7E7E7
+    public static let coreGrey3 = #B8B8B8
+    public static let coreGrey4 = #A0A0A0
+    public static let coreGrey5 = #808285
+    public static let coreGrey6 = #000000
+    public static let coreWhite = #FFFFFF
     public static let divider = rgba(#FFFFFF, 0.05)
     public static let dividerInverse = rgba(#FFFFFF, 0.05)
     public static let error = #F64417
@@ -61,43 +98,6 @@ public class  {
     public static let neutralHigh = #E7E7E7
     public static let neutralLow = #313235
     public static let neutralMedium = #808285
-    public static let paletteBlauBluePrimary = #00B6F1
-    public static let paletteBlauBluePrimary10 = #F7FDFF
-    public static let paletteBlauBluePrimary20 = #E5F6FD
-    public static let paletteBlauBluePrimary30 = #B3E9FB
-    public static let paletteBlauBlueSecondary = #0072BC
-    public static let paletteBlauBlueSecondary10 = #E5F1F9
-    public static let paletteBlauBlueSecondary20 = #B2D4EC
-    public static let paletteBlauBlueSecondary30 = #80B7DF
-    public static let paletteBlauBlueSecondary60 = #005A99
-    public static let paletteBlauGreen = #30D300
-    public static let paletteBlauGreen10 = #EAFBE5
-    public static let paletteBlauGreen30 = #97E980
-    public static let paletteBlauGreen70 = #1D7F00
-    public static let paletteBlauPurple = #7814B3
-    public static let paletteBlauPurple10 = #F1E7F7
-    public static let paletteBlauPurple30 = #BB89D9
-    public static let paletteBlauRed = #F64417
-    public static let paletteBlauRed10 = #FEECE8
-    public static let paletteBlauRed20 = #FCC7B9
-    public static let paletteBlauRed30 = #FA9E87
-    public static let paletteBlauRed40 = #F97C5D
-    public static let paletteBlauRed70 = #C93712
-    public static let paletteBlauYellow = #FFA922
-    public static let paletteBlauYellow10 = #FFF6E9
-    public static let paletteBlauYellow40 = #FFC364
-    public static let paletteBlauYellow60 = #F09500
-    public static let paletteBlauYellow70 = #996614
-    public static let paletteDarkModeBlack = #191919
-    public static let paletteDarkModeGrey = #242424
-    public static let paletteDarkModeGrey6 = #313235
-    public static let paletteGrey1 = #F5F9FA
-    public static let paletteGrey2 = #E7E7E7
-    public static let paletteGrey3 = #B8B8B8
-    public static let paletteGrey4 = #A0A0A0
-    public static let paletteGrey5 = #808285
-    public static let paletteGrey6 = #000000
-    public static let paletteWhite = #FFFFFF
     public static let promo = #7814B3
     public static let promoHigh = #BB89D9
     public static let promoLow = rgba(#FFFFFF, 0.05)
@@ -125,7 +125,7 @@ public class  {
     public static let textPrimary = #E7E7E7
     public static let textPrimaryInverse = #E7E7E7
     public static let textSecondary = #A0A0A0
-    public static let textSecondaryInverse = #A0A0A0
+    public static let textSecondaryInverse = #B8B8B8
     public static let toggleAndroidBackgroundActive = #80B7DF
     public static let toggleAndroidInactive = #808285
     public static let warning = #FFA922
