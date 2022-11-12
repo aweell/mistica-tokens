@@ -53,7 +53,7 @@
     "test": {
       "value": {
         "fontFamily": "{figma.fontFamilies.inter}",
-        "fontWeight": "{core.font-weight.medium}",
+        "fontWeight": "{core.font-weight.bold}",
         "lineHeight": "{core.font-size.3}",
         "fontSize": "{core.font-size.3}",
         "letterSpacing": "{figma.letterSpacing.0}",
@@ -68,7 +68,7 @@
   "figma": {
     "fontFamilies": {
       "inter": {
-        "value": "Inter",
+        "value": "Inika",
         "type": "fontFamilies"
       }
     },
