@@ -31,21 +31,75 @@
       "light": {
         "description": "Font weight",
         "type": "font",
-        "value": "300"
+        "value": "light"
       },
       "regular": {
         "description": "Font weight",
         "type": "font",
-        "value": "400"
+        "value": "regular"
       },
       "medium": {
         "type": "font",
-        "value": "500"
+        "value": "medium"
       },
       "bold": {
         "description": "Font weight",
         "type": "font",
-        "value": "700"
+        "value": "bold"
+      }
+    }
+  },
+  "blau":{
+    "test": {
+      "value": {
+        "fontFamily": "{figma.fontFamilies.inter}",
+        "fontWeight": "{core.font-weight.medium}",
+        "lineHeight": "{core.font-size.3}",
+        "fontSize": "{core.font-size.3}",
+        "letterSpacing": "{figma.letterSpacing.0}",
+        "paragraphSpacing": "{figma.paragraphSpacing.0}",
+        "paragraphIndent": "{paragraphIndent.0}",
+        "textCase": "{figma.textCase.none}",
+        "textDecoration": "{figma.textDecoration.none}"
+      },
+      "type": "typography"
+    }
+  },
+  "figma": {
+    "fontFamilies": {
+      "inter": {
+        "value": "Inter",
+        "type": "fontFamilies"
+      }
+    },
+    "letterSpacing": {
+      "0": {
+        "value": "0%",
+        "type": "letterSpacing"
+      }
+    },
+    "paragraphSpacing": {
+      "0": {
+        "value": "0",
+        "type": "paragraphSpacing"
+      }
+    },
+    "paragraphIndent": {
+      "0": {
+        "value": "0",
+        "type": "paragraphIndent"
+      }
+    },
+    "textCase": {
+      "none": {
+        "value": "none",
+        "type": "textCase"
+      }
+    },
+    "textDecoration": {
+      "none": {
+        "value": "none",
+        "type": "textDecoration"
       }
     }
   }
