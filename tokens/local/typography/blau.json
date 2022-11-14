@@ -8,108 +8,54 @@
     "6": {
       "description": "Font weight",
       "type": "font",
-      "value": "{core.font-weight.regular}"
+      "value": "{core.font-weight.light}"
     },
     "7": {
       "type": "font",
-      "value": "{core.font-weight.medium}"
+      "value": "{core.font-weight.light}"
     },
     "8": {
       "description": "Font weight",
       "type": "font",
-      "value": "{core.font-weight.bold}"
+      "value": "{core.font-weight.light}"
     },
     "9": {
       "description": "Font weight",
       "type": "font",
-      "value": "{core.font-weight.bold}"
+      "value": "{core.font-weight.light}"
     },
     "10": {
       "description": "Font weight",
       "type": "font",
-      "value": "{core.font-weight.bold}"
+      "value": "{core.font-weight.light}"
     }
   },
 
   "media-card-title-font-weight": {
     "description": "Font weight",
     "type": "font",
-    "value": "{core.font-weight.medium}"
+    "value": "{core.font-weight.light}"
   },
   "core": {
     "font-weight": {
       "light": {
         "description": "Font weight",
         "type": "font",
-        "value": "light"
+        "value": "300"
       },
       "regular": {
         "description": "Font weight",
         "type": "font",
-        "value": "regular"
+        "value": "400"
       },
       "medium": {
         "type": "font",
-        "value": "medium"
+        "value": "500"
       },
       "bold": {
         "description": "Font weight",
         "type": "font",
-        "value": "bold"
-      }
-    }
-  },
-  "blau": {
-    "test": {
-      "value": {
-        "fontFamily": "{figma.fontFamilies.inter}",
-        "fontWeight": "{core.font-weight.bold}",
-        "lineHeight": "{core.font-size.3}",
-        "fontSize": "{core.font-size.3}",
-        "letterSpacing": "{figma.letterSpacing.0}",
-        "paragraphSpacing": "{figma.paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{figma.textCase.none}",
-        "textDecoration": "{figma.textDecoration.none}"
-      },
-      "type": "typography"
-    }
-  },
-  "figma": {
-    "fontFamilies": {
-      "inter": {
-        "value": "Inika",
-        "type": "fontFamilies"
-      }
-    },
-    "letterSpacing": {
-      "0": {
-        "value": "0%",
-        "type": "letterSpacing"
-      }
-    },
-    "paragraphSpacing": {
-      "0": {
-        "value": "0",
-        "type": "paragraphSpacing"
-      }
-    },
-    "paragraphIndent": {
-      "0": {
-        "value": "0",
-        "type": "paragraphIndent"
-      }
-    },
-    "textCase": {
-      "none": {
-        "value": "none",
-        "type": "textCase"
-      }
-    },
-    "textDecoration": {
-      "none": {
-        "value": "none",
-        "type": "textDecoration"
+        "value": "700"
       }
     }
   }

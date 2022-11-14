@@ -1,0 +1,139 @@
+
+//
+// colordark.swift
+//
+
+// Do not edit directly
+// Generated on Mon, 14 Nov 2022 15:02:14 GMT
+
+
+import UIKit
+
+public class  {
+    public static let appBarBackground = #092130
+    public static let background = #061824
+    public static let backgroundAlternative = #092130
+    public static let backgroundBrand = #061824
+    public static let backgroundContainer = #092130
+    public static let backgroundFeedbackBottom = #061824
+    public static let backgroundOverlay = rgba(#092130, 0.8)
+    public static let backgroundSkeleton = #0B2739
+    public static let backgroundSkeletonInverse = #0B2739
+    public static let badge = #D73241
+    public static let border = #092130
+    public static let borderDark = #86888C
+    public static let borderLight = #061824
+    public static let borderSelected = #019DF4
+    public static let brand = #0B2739
+    public static let brandHigh = #092130
+    public static let brandLow = rgba(#FFFFFF, 0.05)
+    public static let buttonDangerBackground = #FF374A
+    public static let buttonDangerBackgroundHover = #D73241
+    public static let buttonDangerBackgroundSelected = #D73241
+    public static let buttonLinkBackgroundSelected = rgba(#FFFFFF, 0.05)
+    public static let buttonLinkBackgroundSelectedInverse = rgba(#FFFFFF, 0.05)
+    public static let buttonPrimaryBackground = #019DF4
+    public static let buttonPrimaryBackgroundHover = #0185CF
+    public static let buttonPrimaryBackgroundInverse = #019DF4
+    public static let buttonPrimaryBackgroundSelected = #0185CF
+    public static let buttonPrimaryBackgroundSelectedInverse = #0185CF
+    public static let buttonSecondaryBackground = #019DF4
+    public static let buttonSecondaryBackgroundSelected = #0185CF
+    public static let buttonSecondaryBorderInverse = #FFFFFF
+    public static let buttonSecondaryBorderSelectedInverse = #0185CF
+    public static let control = #3C5261
+    public static let controlActivated = #019DF4
+    public static let controlError = #FF374A
+    public static let coreDarkModeBlack = #061824
+    public static let coreDarkModeGrey = #092130
+    public static let coreDarkModeGrey2 = #EAEBEE
+    public static let coreDarkModeGrey3 = #CED4D7
+    public static let coreDarkModeGrey4 = #85939C
+    public static let coreDarkModeGrey5 = #6D7D88
+    public static let coreDarkModeGrey6 = #3C5261
+    public static let coreEgg = #F28D15
+    public static let coreEgg10 = #FEF4E8
+    public static let coreEgg40 = #F6AF5B
+    public static let coreEgg80 = #6D3F09
+    public static let coreGrey1 = #F6F6F6
+    public static let coreGrey2 = #EEEEEE
+    public static let coreGrey3 = #DDDDDD
+    public static let coreGrey4 = #999999
+    public static let coreGrey5 = #86888C
+    public static let coreGrey6 = #313235
+    public static let coreMovistarBlue = #019DF4
+    public static let coreMovistarBlue10 = #E6F5FD
+    public static let coreMovistarBlue20 = #B3E1FB
+    public static let coreMovistarBlue30 = #80CEF9
+    public static let coreMovistarBlue40 = #4DBAF7
+    public static let coreMovistarBlue55 = #0185CF
+    public static let coreMovistarBlueDark = #0B2739
+    public static let coreMovistarBlueDark60 = #091F2E
+    public static let coreMovistarBlueDark70 = #081B28
+    public static let coreMovistarGreen = #5CB615
+    public static let coreMovistarGreen10 = #EFF8E8
+    public static let coreMovistarGreen40 = #8DCC5B
+    public static let coreMovistarGreen70 = #407F0F
+    public static let corePepper = #FF374A
+    public static let corePepper10 = #FFEBED
+    public static let corePepper40 = #FF7380
+    public static let corePepper55 = #D73241
+    public static let corePepper70 = #B22634
+    public static let corePink = #E63780
+    public static let corePurple = #A13EA1
+    public static let corePurple10 = #F6ECF6
+    public static let corePurple40 = #BD78BD
+    public static let corePurple70 = #712B71
+    public static let coreWhite = #FFFFFF
+    public static let divider = rgba(#FFFFFF, 0.05)
+    public static let dividerInverse = rgba(#FFFFFF, 0.05)
+    public static let error = #FF374A
+    public static let errorHigh = #FF7380
+    public static let errorLow = rgba(#FFFFFF, 0.05)
+    public static let feedbackErrorBackground = #FF374A
+    public static let feedbackInfoBackground = #0B2739
+    public static let highlight = #E63780
+    public static let inverse = #EAEBEE
+    public static let iosControlKnob = #EAEBEE
+    public static let loadingBar = #019DF4
+    public static let loadingBarBackground = #3C5261
+    public static let navigationBarBackground = #061824
+    public static let navigationBarDivider = #061824
+    public static let neutralHigh = #EAEBEE
+    public static let neutralLow = #092130
+    public static let neutralMedium = #6D7D88
+    public static let promo = #A13EA1
+    public static let promoHigh = #BD78BD
+    public static let promoLow = rgba(#FFFFFF, 0.05)
+    public static let skeletonWave = #86888C
+    public static let success = #5CB615
+    public static let successHigh = #8DCC5B
+    public static let successLow = rgba(#FFFFFF, 0.05)
+    public static let textAppBar = #6D7D88
+    public static let textAppBarSelected = #EAEBEE
+    public static let textButtonPrimary = #EAEBEE
+    public static let textButtonPrimaryInverse = #EAEBEE
+    public static let textButtonPrimaryInverseSelected = #EAEBEE
+    public static let textButtonSecondary = #EAEBEE
+    public static let textButtonSecondaryInverse = #EAEBEE
+    public static let textButtonSecondaryInverseSelected = #85939C
+    public static let textButtonSecondarySelected = #85939C
+    public static let textLink = #019DF4
+    public static let textLinkDanger = #FF374A
+    public static let textLinkInverse = #FFFFFF
+    public static let textLinkSnackbar = #80CEF9
+    public static let textNavigationBarPrimary = #EAEBEE
+    public static let textNavigationBarSecondary = #85939C
+    public static let textNavigationSearchBarHint = #85939C
+    public static let textNavigationSearchBarText = #EAEBEE
+    public static let textPrimary = #EAEBEE
+    public static let textPrimaryInverse = #EAEBEE
+    public static let textSecondary = #85939C
+    public static let textSecondaryInverse = #85939C
+    public static let titleColor = #EAEBEE
+    public static let toggleAndroidBackgroundActive = #B3E1FB
+    public static let toggleAndroidInactive = #EAEBEE
+    public static let warning = #F28D15
+    public static let warningHigh = #F6AF5B
+    public static let warningLow = rgba(#FFFFFF, 0.05)
+}

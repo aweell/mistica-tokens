@@ -21,11 +21,11 @@ function getColor(brand, platform, mode) {
 
       },
       "android": {
-        "transformGroup": "compose",
+        "transforms": ["color/composeColor"],
         "buildPath": `build/android/${brand}/`,
         "files": [{
           "destination": `tokens.colors_${mode}.xml`,
-          "format": "compose/object"
+          "format": "android/resources"
         }]
 
       },
@@ -43,7 +43,7 @@ function getColor(brand, platform, mode) {
 
 console.log('Build started...');
 
-// PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
+// Process tokens
 
 ['blau', 'movistar', 'o2', 'o2-classic','solar-360', 'vivo'].map(function (brand) {
   ['light', 'dark'].map(function (mode) {
@@ -53,6 +53,8 @@ console.log('Build started...');
     console.log(`\nProcessing: [${platform}] [${brand}] [${mode}]`);
 
     const StyleDictionary = StyleDictionaryPackage.extend(getColor(brand, platform, mode));
+
+    // Remove core tokens from output
 
     StyleDictionary.registerFilter({
       name: 'isCore',
@@ -83,12 +85,12 @@ function getTypography(brand, platform) {
     ],
     "platforms": {
       "web": {
-        "transformGroup": "js",
+        "transforms": ["attribute/cti", "name/cti/camel", "lineToEm", "sizeToRem"],
         "buildPath": `build/web/`,
         "files": [{
           "destination": `${brand}/typography.json`,
           "filter": "isCore",
-          "format": "json/nested",
+          "format": "json/flat",
         }]
 
       },
@@ -96,8 +98,8 @@ function getTypography(brand, platform) {
         "transformGroup": "android",
         "buildPath": `build/android/${brand}/`,
         "files": [{
-          
           "destination": "tokens.font_dimens.xml",
+          "filter": "isCore",
           "format": "android/fontDimens"
         }]
       },
@@ -105,8 +107,9 @@ function getTypography(brand, platform) {
         "transformGroup": "ios",
         "buildPath": `build/ios/${brand}/`,
         "files": [{
-          "destination": "tokens.h",
-          "format": "ios/macros"
+          "destination": "typography.swift",
+          "filter": "isCore",
+          "format": "ios-swift/class.swift"
         }]
       }
     }
@@ -115,7 +118,7 @@ function getTypography(brand, platform) {
 
 console.log('Build started...');
 
-// PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
+// Process tokens
 
 ['blau', 'movistar', 'o2', 'o2-classic','solar-360', 'vivo'].map(function (brand) {
   ['web', 'ios', 'android'].map(function (platform) {
@@ -125,6 +128,33 @@ console.log('Build started...');
 
 
     const StyleDictionary = StyleDictionaryPackage.extend(getTypography(brand, platform));
+
+
+    // Transform unitless font properties to rem and em
+
+    StyleDictionary.registerTransform({
+      name: 'sizeToRem',
+      type: 'value',
+      matcher: function(token) {
+        return token.attributes.type === 'font-size';
+      },
+      transformer: function(token) {
+        return (parseInt(token.original.value)) / 16 + 'rem';
+      }
+    });
+
+    StyleDictionary.registerTransform({
+      name: 'lineToEm',
+      type: 'value',
+      matcher: function(token) {
+        return token.attributes.type === 'line-height';
+      },
+      transformer: function(token) {
+        return (parseFloat(token.original.value)) + 'em';
+      }
+    });
+
+    // Remove core tokens from output
 
     StyleDictionary.registerFilter({
       name: 'isCore',
