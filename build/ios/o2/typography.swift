@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Mon, 14 Nov 2022 15:02:14 GMT
+// Generated on Thu, 24 Nov 2022 14:16:35 GMT
 
 
 import SwiftUI
@@ -30,7 +30,7 @@ public class  {
     public static let LineHeightPresetMobile7 = 1.5
     public static let LineHeightPresetMobile8 = 1.375
     public static let LineHeightPresetMobile9 = 1.375
-    public static let MediaCardTitleFontWeight = 500
+    public static let MediaCardTitleFontWeight = medium
     public static let SizePresetDesktop1 = 14
     public static let SizePresetDesktop10 = 72
     public static let SizePresetDesktop2 = 16
@@ -51,10 +51,10 @@ public class  {
     public static let SizePresetMobile7 = 28
     public static let SizePresetMobile8 = 32
     public static let SizePresetMobile9 = 32
-    public static let WeightPreset10 = 300
-    public static let WeightPreset5 = 300
-    public static let WeightPreset6 = 300
-    public static let WeightPreset7 = 300
-    public static let WeightPreset8 = 300
-    public static let WeightPreset9 = 300
+    public static let WeightPreset10 = light
+    public static let WeightPreset5 = light
+    public static let WeightPreset6 = light
+    public static let WeightPreset7 = light
+    public static let WeightPreset8 = light
+    public static let WeightPreset9 = light
 }

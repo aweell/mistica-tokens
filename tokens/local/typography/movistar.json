@@ -41,21 +41,21 @@
       "light": {
         "description": "Font weight",
         "type": "font",
-        "value": "300"
+        "value": "light"
       },
       "regular": {
         "description": "Font weight",
         "type": "font",
-        "value": "400"
+        "value": "regular"
       },
       "medium": {
         "type": "font",
-        "value": "500"
+        "value": "medium"
       },
       "bold": {
         "description": "Font weight",
         "type": "font",
-        "value": "700"
+        "value": "bold"
       }
     }
   }
