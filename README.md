@@ -19,7 +19,13 @@ From 1 to 10 each  `font-size ` and  `line-height` tokens match the current text
 
 There are 4 preset tokens for `font-weight`, additionally the following component tokens are available:
 
-* media-card-title-font-weight
+* card-title-font-weight
+
+
+## Border radius
+
+* button-border-radius
+* boxed-border-radius
 
 
 ## Core tokens
