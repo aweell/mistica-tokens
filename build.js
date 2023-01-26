@@ -88,12 +88,7 @@ function getRadius(brand, platform) {
     ],
     platforms: {
       web: {
-        transforms: [
-          "attribute/cti",
-          "name/cti/camel",
-          "lineToEm",
-          "sizeToRem",
-        ],
+        transforms: ["attribute/cti", "name/cti/camel", "unitToPx"],
         buildPath: `build/web/`,
         files: [
           {
@@ -147,24 +142,13 @@ console.log("Build started...");
     // Transform unitless font properties to rem and em
 
     StyleDictionary.registerTransform({
-      name: "sizeToRem",
+      name: "unitToPx",
       type: "value",
       matcher: function (token) {
-        return token.attributes.type === "font-size";
+        return token.attributes.type === "border-radius";
       },
       transformer: function (token) {
-        return parseInt(token.original.value) / 16 + "rem";
-      },
-    });
-
-    StyleDictionary.registerTransform({
-      name: "lineToEm",
-      type: "value",
-      matcher: function (token) {
-        return token.attributes.type === "line-height";
-      },
-      transformer: function (token) {
-        return parseFloat(token.original.value) + "em";
+        return parseInt(token.original.value) + "px";
       },
     });
 
