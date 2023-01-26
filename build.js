@@ -1,178 +1,291 @@
-const StyleDictionaryPackage = require('style-dictionary');
+const StyleDictionaryPackage = require("style-dictionary");
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 
-
 function getColor(brand, platform, mode) {
   return {
-    "source": [
+    source: [
       `tokens/local/color/${brand}/${mode}.json`,
-      `tokens/platforms/${platform}/*.json`
+      `tokens/platforms/${platform}/*.json`,
     ],
-    "platforms": {
-      "web": {
-        "transformGroup": "js",
-        "buildPath": `build/web/${brand}/`,
-        "files": [{
-          "filter": "isCore",
-          "destination": `color-${mode}.json`,
-          "format": "json/nested"
-        }]
-
+    platforms: {
+      web: {
+        transformGroup: "js",
+        buildPath: `build/web/${brand}/`,
+        files: [
+          {
+            filter: "isCore",
+            destination: `color-${mode}.json`,
+            format: "json/nested",
+          },
+        ],
       },
-      "android": {
-        "transforms": ["color/composeColor"],
-        "buildPath": `build/android/${brand}/`,
-        "files": [{
-          "destination": `tokens.colors_${mode}.xml`,
-          "format": "android/resources"
-        }]
-
+      android: {
+        transforms: ["color/composeColor"],
+        buildPath: `build/android/${brand}/`,
+        files: [
+          {
+            destination: `tokens.colors_${mode}.xml`,
+            format: "android/resources",
+          },
+        ],
       },
-      "ios": {
-        "transformGroup": "ios-swift",
-        "buildPath": `build/ios/${brand}/`,
-        "files": [{
-          "destination": `color${mode}.swift`,
-          "format": "ios-swift/class.swift"
-        }]
-      }
-    }
+      ios: {
+        transformGroup: "ios-swift",
+        buildPath: `build/ios/${brand}/`,
+        files: [
+          {
+            destination: `color${mode}.swift`,
+            format: "ios-swift/class.swift",
+          },
+        ],
+      },
+    },
   };
 }
 
-console.log('Build started...');
+console.log("Build started...");
 
 // Process tokens
 
-['blau', 'movistar', 'o2', 'o2-classic','solar-360', 'vivo'].map(function (brand) {
-  ['light', 'dark'].map(function (mode) {
-  ['web', 'ios', 'android'].map(function (platform) {
+["blau", "movistar", "o2", "o2-classic", "solar-360", "vivo"].map(function (
+  brand
+) {
+  ["light", "dark"].map(function (mode) {
+    ["web", "ios", "android"].map(function (platform) {
+      console.log("\n==============================================");
+      console.log(`\nProcessing: [${platform}] [${brand}] [${mode}]`);
 
-    console.log('\n==============================================');
-    console.log(`\nProcessing: [${platform}] [${brand}] [${mode}]`);
+      const StyleDictionary = StyleDictionaryPackage.extend(
+        getColor(brand, platform, mode)
+      );
 
-    const StyleDictionary = StyleDictionaryPackage.extend(getColor(brand, platform, mode));
+      // Remove core tokens from output
 
-    // Remove core tokens from output
+      StyleDictionary.registerFilter({
+        name: "isCore",
+        matcher: function (token) {
+          return token.attributes.category !== "core";
+        },
+      });
 
-    StyleDictionary.registerFilter({
-      name: 'isCore',
-      matcher: function(token) {
-        return token.attributes.category !== 'core';
-      }
-    })
+      StyleDictionary.buildPlatform(platform);
 
-    StyleDictionary.buildPlatform(platform);
+      console.log("\nEnd processing");
+    });
+  });
+});
 
-    console.log('\nEnd processing');
+console.log("\n==============================================");
+console.log("\nBuild completed!");
 
-  })
-})
-})
-
-
-console.log('\n==============================================');
-console.log('\nBuild completed!');
-
-
-function getTypography(brand, platform) {
+function getRadius(brand, platform) {
   return {
-    "source": [
-      `tokens/local/typography/${brand}.json`,
-      "tokens/global/typography.json",
-      `tokens/platforms/${platform}/*.json`
+    source: [
+      `tokens/local/border-radius/${brand}.json`,
+      "tokens/global/border-radius.json",
+      `tokens/platforms/${platform}/*.json`,
     ],
-    "platforms": {
-      "web": {
-        "transforms": ["attribute/cti", "name/cti/camel", "lineToEm", "sizeToRem"],
-        "buildPath": `build/web/`,
-        "files": [{
-          "destination": `${brand}/typography.json`,
-          "filter": "isCore",
-          "format": "json/flat",
-        }]
-
+    platforms: {
+      web: {
+        transforms: [
+          "attribute/cti",
+          "name/cti/camel",
+          "lineToEm",
+          "sizeToRem",
+        ],
+        buildPath: `build/web/`,
+        files: [
+          {
+            destination: `${brand}/border-radius.json`,
+            filter: "isCore",
+            format: "json/flat",
+          },
+        ],
       },
-      "android": {
-        "transformGroup": "android",
-        "buildPath": `build/android/${brand}/`,
-        "files": [{
-          "destination": "tokens.font_dimens.xml",
-          "filter": "isCore",
-          "format": "android/fontDimens"
-        }]
+      android: {
+        transformGroup: "android",
+        buildPath: `build/android/${brand}/`,
+        files: [
+          {
+            destination: "tokens.font_dimens.xml",
+            filter: "isCore",
+            format: "android/fontDimens",
+          },
+        ],
       },
-      "ios": {
-        "transformGroup": "ios",
-        "buildPath": `build/ios/${brand}/`,
-        "files": [{
-          "destination": "typography.swift",
-          "filter": "isCore",
-          "format": "ios-swift/class.swift"
-        }]
-      }
-    }
+      ios: {
+        transformGroup: "ios",
+        buildPath: `build/ios/${brand}/`,
+        files: [
+          {
+            destination: "typography.swift",
+            filter: "isCore",
+            format: "ios-swift/class.swift",
+          },
+        ],
+      },
+    },
   };
 }
 
-console.log('Build started...');
+console.log("Build started...");
 
 // Process tokens
 
-['blau', 'movistar', 'o2', 'o2-classic','solar-360', 'vivo'].map(function (brand) {
-  ['web', 'ios', 'android'].map(function (platform) {
-
-    console.log('\n==============================================');
+["blau", "movistar", "o2", "o2-classic", "solar-360", "vivo"].map(function (
+  brand
+) {
+  ["web", "ios", "android"].map(function (platform) {
+    console.log("\n==============================================");
     console.log(`\nProcessing: [${platform}] [${brand}]`);
 
-
-    const StyleDictionary = StyleDictionaryPackage.extend(getTypography(brand, platform));
-
+    const StyleDictionary = StyleDictionaryPackage.extend(
+      getRadius(brand, platform)
+    );
 
     // Transform unitless font properties to rem and em
 
     StyleDictionary.registerTransform({
-      name: 'sizeToRem',
-      type: 'value',
-      matcher: function(token) {
-        return token.attributes.type === 'font-size';
+      name: "sizeToRem",
+      type: "value",
+      matcher: function (token) {
+        return token.attributes.type === "font-size";
       },
-      transformer: function(token) {
-        return (parseInt(token.original.value)) / 16 + 'rem';
-      }
+      transformer: function (token) {
+        return parseInt(token.original.value) / 16 + "rem";
+      },
     });
 
     StyleDictionary.registerTransform({
-      name: 'lineToEm',
-      type: 'value',
-      matcher: function(token) {
-        return token.attributes.type === 'line-height';
+      name: "lineToEm",
+      type: "value",
+      matcher: function (token) {
+        return token.attributes.type === "line-height";
       },
-      transformer: function(token) {
-        return (parseFloat(token.original.value)) + 'em';
-      }
+      transformer: function (token) {
+        return parseFloat(token.original.value) + "em";
+      },
     });
 
     // Remove core tokens from output
 
     StyleDictionary.registerFilter({
-      name: 'isCore',
-      matcher: function(token) {
-        return token.attributes.category !== 'core';
-      }
-    })
+      name: "isCore",
+      matcher: function (token) {
+        return token.attributes.category !== "core";
+      },
+    });
 
     StyleDictionary.buildPlatform(platform);
-   
 
-    console.log('\nEnd processing');
+    console.log("\nEnd processing");
+  });
+});
 
-  })
-})
+console.log("\n==============================================");
+console.log("\nBuild completed!");
 
+function getTypography(brand, platform) {
+  return {
+    source: [
+      `tokens/local/typography/${brand}.json`,
+      "tokens/global/typography.json",
+      `tokens/platforms/${platform}/*.json`,
+    ],
+    platforms: {
+      web: {
+        transforms: [
+          "attribute/cti",
+          "name/cti/camel",
+          "lineToEm",
+          "sizeToRem",
+        ],
+        buildPath: `build/web/`,
+        files: [
+          {
+            destination: `${brand}/typography.json`,
+            filter: "isCore",
+            format: "json/flat",
+          },
+        ],
+      },
+      android: {
+        transformGroup: "android",
+        buildPath: `build/android/${brand}/`,
+        files: [
+          {
+            destination: "tokens.font_dimens.xml",
+            filter: "isCore",
+            format: "android/fontDimens",
+          },
+        ],
+      },
+      ios: {
+        transformGroup: "ios",
+        buildPath: `build/ios/${brand}/`,
+        files: [
+          {
+            destination: "typography.swift",
+            filter: "isCore",
+            format: "ios-swift/class.swift",
+          },
+        ],
+      },
+    },
+  };
+}
 
-console.log('\n==============================================');
-console.log('\nBuild completed!');
+console.log("Build started...");
 
+// Process tokens
 
+["blau", "movistar", "o2", "o2-classic", "solar-360", "vivo"].map(function (
+  brand
+) {
+  ["web", "ios", "android"].map(function (platform) {
+    console.log("\n==============================================");
+    console.log(`\nProcessing: [${platform}] [${brand}]`);
+
+    const StyleDictionary = StyleDictionaryPackage.extend(
+      getTypography(brand, platform)
+    );
+
+    // Transform unitless font properties to rem and em
+
+    StyleDictionary.registerTransform({
+      name: "sizeToRem",
+      type: "value",
+      matcher: function (token) {
+        return token.attributes.type === "font-size";
+      },
+      transformer: function (token) {
+        return parseInt(token.original.value) / 16 + "rem";
+      },
+    });
+
+    StyleDictionary.registerTransform({
+      name: "lineToEm",
+      type: "value",
+      matcher: function (token) {
+        return token.attributes.type === "line-height";
+      },
+      transformer: function (token) {
+        return parseFloat(token.original.value) + "em";
+      },
+    });
+
+    // Remove core tokens from output
+
+    StyleDictionary.registerFilter({
+      name: "isCore",
+      matcher: function (token) {
+        return token.attributes.category !== "core";
+      },
+    });
+
+    StyleDictionary.buildPlatform(platform);
+
+    console.log("\nEnd processing");
+  });
+});

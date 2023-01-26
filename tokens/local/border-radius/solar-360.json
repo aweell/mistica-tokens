@@ -1,0 +1,12 @@
+{
+  "button-border-radius": {
+    "description": "border-radius",
+    "type": "border-radius",
+    "value": "8"
+  },
+  "boxed-border-radius": {
+    "description": "border-radius",
+    "type": "border-radius",
+    "value": "8"
+  }
+}
